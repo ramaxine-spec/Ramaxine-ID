@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Ramaxine.id</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 30px 16px 40px;
+            font-family: -apple-system, 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .container {
+            max-width: 420px;
+            width: 100%;
+            background: #ffffff;
+            padding: 28px 20px 24px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 0 2px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #0a1a2f;
+        }
+
+        .header-badge {
+            background: #f0f4ff;
+            padding: 5px 14px 5px 12px;
+            border-radius: 40px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #007aff;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .logo-area {
+            display: flex;
+            justify-content: center;
+            margin: 8px 0 20px;
+        }
+
+        .logo-area img {
+            width: 88px;
+            height: 88px;
+            border-radius: 24px;
+            object-fit: cover;
+            border: 2px solid #f0f4ff;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .greeting {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .greeting h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0a1a2f;
+            letter-spacing: -0.3px;
+        }
+
+        .greeting p {
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        .menu-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #f8faff;
+            padding: 14px 18px 14px 14px;
+            border-radius: 16px;
+            border: 1px solid #eef2f7;
+            text-decoration: none;
+            color: #0a1a2f;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background: #f0f4ff;
+            border-color: #d0d9e8;
+        }
+
+        .menu-item:active {
+            transform: scale(0.97);
+        }
+
+        .menu-item .menu-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 1px solid #eef2f7;
+            background: white;
+        }
+
+        .menu-item .info {
+            flex: 1;
+        }
+
+        .menu-item .info h3 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            color: #0a1a2f;
+        }
+
+        .menu-item .info p {
+            font-size: 13px;
+            color: #6b7280;
+            font-weight: 400;
+            margin-top: 1px;
+        }
+
+        .menu-item .arrow {
+            color: #b0b8c4;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .menu-item:hover .arrow {
+            transform: translateX(4px);
+            color: #007aff;
+        }
+
+        .menu-item.contact-admin {
+            background: #f0faf5;
+            border-color: #d4e8df;
+        }
+
+        .menu-item.contact-admin:hover {
+            background: #e5f5ee;
+        }
+
+        .footer {
+            text-align: center;
+            color: #a0a8b8;
+            font-size: 12px;
+            padding-top: 14px;
+            border-top: 1px solid #f0f2f5;
+            letter-spacing: 0.2px;
+        }
+
+        .footer i {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 440px) {
+            body { padding: 20px 12px 30px; }
+            .container { padding: 20px 14px 20px; }
+            .header h1 { font-size: 24px; }
+            .menu-item { padding: 12px 14px 12px 12px; gap: 14px; }
+            .menu-item .menu-logo { width: 42px; height: 42px; border-radius: 12px; }
+            .menu-item .info h3 { font-size: 15px; }
+            .logo-area img { width: 74px; height: 74px; border-radius: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Ramaxine.id</h1>
+            <span class="header-badge"><i class="fas fa-check-circle"></i> Premium</span>
+        </div>
+
+        <div class="logo-area">
+            <img src="https://cdn.phototourl.com/free/2026-07-21-4625ad61-03e5-4c4e-9566-0afde713bafa.jpg" alt="Ramaxine ID">
+        </div>
+
+        <div class="greeting">
+            <h2>Pilih Layanan Anda</h2>
+            <p>Mudah, cepat, dan terpercaya</p>
+        </div>
+
+        <div class="menu-grid">
+
+            <a href="gmaps.html" class="menu-item">
+                <img class="menu-logo" src="https://cdn.phototourl.com/free/2026-07-21-fc5ef244-8124-4f39-bc3e-9b4773d4dfa6.jpg" alt="Gmaps">
+                <div class="info">
+                    <h3>Review Gmaps</h3>
+                    <p>Rp5.000 / review</p>
+                </div>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="apps.html" class="menu-item">
+                <img class="menu-logo" src="https://cdn.phototourl.com/free/2026-07-21-dcf7970d-25d1-4591-93d9-84f7837011c4.jpg" alt="Aplikasi">
+                <div class="info">
+                    <h3>Review Aplikasi</h3>
+                    <p>Rp7.500 / review</p>
+                </div>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="sosmed.html" class="menu-item">
+                <img class="menu-logo" src="https://cdn.phototourl.com/free/2026-07-21-2ed92472-56ba-4018-89bd-9bb60cc4df9a.jpg" alt="Sosmed">
+                <div class="info">
+                    <h3>Boost Sosmed</h3>
+                    <p>Rp1.000 / unit</p>
+                </div>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+            <a href="contact.html" class="menu-item contact-admin">
+                <img class="menu-logo" src="https://cdn.phototourl.com/free/2026-07-21-4625ad61-03e5-4c4e-9566-0afde713bafa.jpg" alt="Contact">
+                <div class="info">
+                    <h3>Contact Admin</h3>
+                    <p>WhatsApp & Telegram</p>
+                </div>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+            </a>
+
+        </div>
+
+        <div class="footer">
+            <i class="fas fa-shield-alt"></i> Aman & Terpercaya
+        </div>
+
+    </div>
+
+</body>
+</html>
